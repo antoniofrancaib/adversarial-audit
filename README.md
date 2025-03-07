@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LLM Adversarial Audit
 
-## Getting Started
+## Overview
 
-First, run the development server:
+**LLM Adversarial Audit** is a specialized tool designed to help researchers and developers assess the robustness of Large Language Models (LLMs) against adversarial, manipulative, or potentially harmful prompts. The tool provides an intuitive interface for manual prompt testing, enabling users to evaluate model responses, identify vulnerabilities, and refine prompt engineering techniques.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+We created both a **manual input version** and an **automatically run adversarial version**, where two LLMs are adversarially confronted. One LLM acts as the interviewer, attempting to elicit malicious responses, while the other serves as the tested LLM, allowing researchers to analyze susceptibility to adversarial manipulation.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Manual Prompt Testing**: A clean, streamlined interface for testing LLM responses to custom prompts.
+- **Multi-Model Support**: Test against leading LLMs, including GPT-4, GPT-3.5-Turbo, and simulated versions of Claude, Llama, and Gemini.
+- **Conversation History**: Maintain multi-turn context to analyze model behavior in extended interactions.
+- **Follow-up Questioning**: Probe model responses further with sequential queries.
+- **Response Evaluation**: Analyze outputs for potential vulnerabilities, inconsistencies, or safety concerns.
+- **Secure API Key Management**: Utilize environment variables for safe and flexible API integration.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage Guide
 
-## Learn More
+1. **Select a Model**: Choose an LLM from the dropdown menu.
+2. **Enter a Prompt**: Type the test prompt in the input field.
+3. **Submit**: Click "Submit Prompt" to send it to the selected model.
+4. **Analyze Response**: Review and assess the model’s output.
+5. **Follow Up**: Continue the conversation to explore more complex interactions.
 
-To learn more about Next.js, take a look at the following resources:
+## Use Cases
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Red Team Testing**: Identify vulnerabilities in LLM implementations and improve security.
+- **Prompt Engineering Research**: Explore prompt variations to refine AI interactions.
+- **Safety Assessment**: Evaluate responses to potentially harmful or misleading inputs.
+- **Educational Purposes**: Gain insights into LLM behavior, biases, and limitations.
